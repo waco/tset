@@ -1,0 +1,40 @@
+= TSet: 配列の和集合/積集合/差集合
+
+* javascriptの配列の和・積・差を求めます。
+* 元の配列は破壊しません。
+* 独自の比較関数を使用することができます。
+
+== 例
+
+var a = [2, 4, 3, 6, 1];
+var b = [3, 5, 2];
+var r;
+
+//和集合
+print("union")
+r = TSet.union(a, b); // => [1,2,3,4,5,6]
+
+//積集合
+print("intersection")
+r = TSet.intersection(a, b); // => [2,3]
+
+//差集合
+print("difference")
+r = TSet.difference(a, b); // => [1,4,6]
+r = TSet.difference(b, a); // => [5]
+
+//元の配列は破壊しない
+print("original a");
+print(a.join(", "));
+print("original b");
+print(b.join(", "));
+
+== Todo
+
+* unique関数とか
+
+== 作者
+
+Copyright 2010 (c) kuri., under MIT License.
+
+http://d.hatena.ne.jp/folderol/
